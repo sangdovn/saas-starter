@@ -1,29 +1,34 @@
-import { CTA } from '@/components/home/cta'
-import { Features } from '@/components/home/features'
-import { Footer } from '@/components/home/footer'
-import { Header } from '@/components/home/header'
-import { Hero } from '@/components/home/hero'
-import { Pricing } from '@/components/home/pricing'
-import { Testimonials } from '@/components/home/testimonials'
+import { Header } from '@/components/home/header';
+import { Hero } from '@/components/home/hero';
 
 export default function Page() {
-    return (
-        <div className="flex min-h-screen flex-col">
-            <Header />
+  return (
+    <div
+      className="font-bricolage-grotesque flex min-h-screen w-full flex-col"
+      style={{
+        backgroundColor: 'rgb(33, 33, 33)',
+        color: 'rgb(207, 207, 207)',
+      }}
+    >
+      <Header />
 
-            <main className="flex-1">
-                <Hero />
+      <main className="flex-1">
+        <Hero />
+      </main>
 
-                <Features />
+      {/* <main className="flex-1">
+        <Hero />
 
-                <Testimonials />
+        <Features />
 
-                <Pricing />
+        <Testimonials />
 
-                <CTA />
-            </main>
+        <Pricing />
 
-            <Footer />
-        </div>
-    )
+        <CTA />
+      </main>
+
+      <Footer /> */}
+    </div>
+  );
 }

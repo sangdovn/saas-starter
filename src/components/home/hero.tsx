@@ -1,44 +1,37 @@
-import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
-import { Button } from '../ui/button'
+import { ArrowRight, Gift } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '../ui/button';
 
 export function Hero() {
-    return (
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-                    <div className="flex flex-col justify-center space-y-4">
-                        <div className="space-y-2">
-                            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                                Streamline Your Workflow Like Never Before
-                            </h1>
-                            <p className="text-muted-foreground max-w-[600px] md:text-xl">
-                                Boost productivity, reduce overhead, and focus
-                                on what matters most with our all-in-one
-                                platform.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                            <Button size="lg" className="gap-1">
-                                Start Free Trial{' '}
-                                <ArrowRight className="h-4 w-4" />
-                            </Button>
-                            <Button size="lg" variant="outline">
-                                Schedule Demo
-                            </Button>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center">
-                        <Image
-                            src="/placeholder.svg?height=550&width=550"
-                            alt="Hero Image"
-                            width={550}
-                            height={550}
-                            className="rounded-xl object-cover"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
+  return (
+    <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-12 p-8 lg:flex-row lg:gap-24 lg:py-24">
+      <div className="flex flex-col items-center gap-6 lg:items-start lg:gap-12">
+        <h1 className="flex flex-col items-center text-4xl font-extrabold tracking-tight lg:items-start lg:text-6xl">
+          <span>Leading the world</span>
+          <span>
+            with <span>AI</span>
+          </span>
+        </h1>
+        <p className="text-center text-lg leading-relaxed opacity-80 lg:text-start">
+          Discover innovative solutions that harness the power of artificial
+          intelligence to transform your business.
+        </p>
+
+        <div className="flex flex-col items-center justify-center gap-4 lg:items-start">
+          <Button className="cursor-pointer bg-blue-700 !px-20 !py-6 text-white hover:bg-blue-800">
+            Get Titanix <ArrowRight />
+          </Button>
+          <p className="flex items-center justify-center gap-1 text-sm lg:justify-start">
+            <Gift className="text-green-500" />
+            <span className="text-green-500">$100 off</span>
+            <span> for the first 8683 customer (12 left)</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="flex w-full items-center justify-center lg:max-w-1/2">
+        <Image src="/hero.png" alt="Hero Image" width={1080} height={1920} />
+      </div>
+    </section>
+  );
 }
