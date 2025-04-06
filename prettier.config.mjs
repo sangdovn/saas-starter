@@ -4,13 +4,13 @@
  */
 
 const config = {
-    plugins: ['prettier-plugin-tailwindcss'],
-    trailingComma: 'es5',
-    tabWidth: 2,
-    semi: true,
-    singleQuote: true,
-    endOfLine: 'lf',
-    printWidth: 80,
-}
+  plugins: ['prettier-plugin-tailwindcss'],
+  trailingComma: 'es5',
+  tabWidth: 2,
+  semi: true,
+  singleQuote: true,
+  endOfLine: 'lf',
+  printWidth: 80,
+};
 
-export default config
+export default config;
